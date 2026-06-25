@@ -1,0 +1,189 @@
+@import "tailwindcss";
+
+/* Custom 3D Transformations and Perspective Utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.perspective-2000 {
+  perspective: 2000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Custom Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(2deg);
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.15);
+  }
+}
+
+@keyframes grid-move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40px 40px;
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 8s ease-in-out infinite;
+}
+
+.animate-grid-move {
+  animation: grid-move 20s linear infinite;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Floating Sky & Nature Animations */
+@keyframes cloud-move-slow {
+  0% {
+    transform: translateX(-150px) translateY(0);
+  }
+  50% {
+    transform: translateX(50vw) translateY(15px);
+  }
+  100% {
+    transform: translateX(100vw) translateY(0);
+  }
+}
+
+@keyframes leaf-fall-swirl {
+  0% {
+    transform: translateY(-50px) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(110vh) translateX(120px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes sky-gradient-shimmer {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-cloud-slow-1 {
+  animation: cloud-move-slow 50s linear infinite;
+}
+
+.animate-cloud-slow-2 {
+  animation: cloud-move-slow 75s linear infinite;
+  animation-delay: -25s;
+}
+
+.animate-cloud-slow-3 {
+  animation: cloud-move-slow 110s linear infinite;
+  animation-delay: -60s;
+}
+
+.animate-leaf-swirl-1 {
+  animation: leaf-fall-swirl 20s linear infinite;
+}
+
+.animate-leaf-swirl-2 {
+  animation: leaf-fall-swirl 28s linear infinite;
+  animation-delay: -7s;
+}
+
+.animate-leaf-swirl-3 {
+  animation: leaf-fall-swirl 36s linear infinite;
+  animation-delay: -18s;
+}
+
+.animate-sky-shimmer {
+  background-size: 200% 200%;
+  animation: sky-gradient-shimmer 20s ease infinite;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 15, 20, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(245, 158, 11, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(245, 158, 11, 0.6);
+}
+
+/* Glassmorphism overlays */
+.glass-panel {
+  background: rgba(18, 18, 24, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* Glow Backlights */
+.glow-amber {
+  box-shadow: 0 0 40px -10px rgba(245, 158, 11, 0.15);
+}
+
+.glow-teal {
+  box-shadow: 0 0 40px -10px rgba(20, 184, 166, 0.15);
+}
+
+.glow-emerald {
+  box-shadow: 0 0 40px -10px rgba(16, 185, 129, 0.15);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 40px -10px rgba(6, 182, 212, 0.15);
+}
+
+/* Code highlight override */
+pre {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+}

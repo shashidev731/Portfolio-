@@ -1,0 +1,6 @@
+{
+  "name": "Web Developer Portfolio",
+  "description": "An interactive portfolio builder and showcase for web projects across different niches, featuring immersive interactive live mockups and live statistics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
